@@ -1,0 +1,18 @@
+<div class="todo-item " [class.completed]="todo.completed">
+  <div class="check-box">
+    <i class="material-icons-outlined">check</i>
+  </div>
+  <p class="todo-text">{{todo.text}}</p>
+
+  <div class="todo-item-actions">
+    <div class="btn todo-item-action-btn">
+      <a [routerLink]="[todo.id]">
+        <i class="material-icons-outlined">edit</i>
+      </a>
+    </div>
+    <div class="btn todo-item-action-btn">
+      <i class="material-icons-outlined" (click)="onDeleteClick()">delete</i>
+    </div>
+  </div>
+
+</div>

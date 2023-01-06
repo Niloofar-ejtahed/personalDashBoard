@@ -1,0 +1,19 @@
+<div class="app-wrapper">
+
+  <div class="top-section">
+    <h1>{{dateTime | async | date:'hh:mm'}}</h1>
+    <h2>{{dateTime | async | date : 'd MMM , y'}}</h2>
+  </div>
+
+  <!-- <div class="content-section" [@routeAnimations]="prepareRoute()" > -->
+  <div class="content-section">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+
+  <div class="bottom-section">
+    <tabs-tile></tabs-tile>
+  </div>
+  
+  <notification></notification>
+
+</div>
