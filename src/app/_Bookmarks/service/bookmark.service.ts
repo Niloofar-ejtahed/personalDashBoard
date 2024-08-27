@@ -59,10 +59,9 @@ saveState(){
    try {
      const bookmarksInStorage = JSON.parse(localStorage.getItem("Bookmarks"))
      if(!bookmarksInStorage) return
-     this.bookMarks.length = 0 //clear the notes array (while kepping the refrence)
-     this.bookMarks.push(...bookmarksInStorage) //Merging two arrays : This example uses spread syntax to push all elements from a second array into the first one.
+     this.bookMarks.length = 0;
+     this.bookMarks.push(...bookmarksInStorage);
    } catch (error) {
-     console.log("خطاااااااااااااااا")
      console.log(error)
    }
  }

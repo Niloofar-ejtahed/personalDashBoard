@@ -61,10 +61,9 @@ storageListenSub: Subscription;
      try {
        const todosInStorage = JSON.parse(localStorage.getItem("Todos"))
        if(!todosInStorage) return
-       this.todos.length = 0 //clear the notes array (while kepping the refrence)
-       this.todos.push(...todosInStorage) //Merging two arrayd : This example uses spread syntax to push all elements from a second array into the first one.
+       this.todos.length = 0;
+       this.todos.push(...todosInStorage);
      } catch (error) {
-       console.log("خطاااااااااااااااا")
        console.log(error)
      }
    }

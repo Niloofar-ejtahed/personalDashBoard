@@ -57,10 +57,9 @@ export class NoteService implements OnDestroy{
     try {
       const notesInStorage = JSON.parse(localStorage.getItem("Notes"))
       if(!notesInStorage) return
-      this.notes.length = 0 //clear the notes array (while kepping the refrence)
-      this.notes.push(...notesInStorage) //Merging two arrayd : This example uses spread syntax to push all elements from a second array into the first one.
+      this.notes.length = 0;
+      this.notes.push(...notesInStorage);
     } catch (error) {
-      console.log("خطاااااااااااااااا")
       console.log(error)
     }
   }
