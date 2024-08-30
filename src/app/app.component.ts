@@ -17,8 +17,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.dateTime = timer(0, 1000).pipe(
-      map(() => {
-        return new Date
+      map(() => {        return new Date
       })
     )
   }
